@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Encuesta de Satisfacción · Soyoda 2026</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:system-ui,-apple-system,sans-serif;background:#f4f6f9;}
+  .sw-page{display:flex;flex-direction:column;min-height:100vh;}
+  .sw-header{background:#003058;}
+  .sw-header-top{background:#003058;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .sw-header-top img{height:40px;object-fit:contain;}
+  .sw-header-logo-fallback{color:white;font-size:22px;font-weight:500;letter-spacing:2px;display:none;}
+  .sw-header-badge{background:#E8A000;color:#412402;font-size:11px;font-weight:600;padding:4px 12px;border-radius:4px;white-space:nowrap;}
+  .sw-header-banner{background:#004475;padding:20px 28px 24px;}
+  .sw-header-banner h1{color:white;font-size:13px;font-weight:400;letter-spacing:1px;text-transform:uppercase;opacity:0.75;margin-bottom:4px;}
+  .sw-header-banner h2{color:white;font-size:26px;font-weight:600;line-height:1.2;margin-bottom:6px;}
+  .sw-header-banner p{color:rgba(255,255,255,0.72);font-size:14px;}
+  .sw-chevron-strip{background:#E8A000;height:8px;}
+  .sw-main{flex:1;padding:28px 20px;display:flex;flex-direction:column;gap:24px;max-width:700px;width:100%;margin:0 auto;}
+  .sw-section-label{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  .sw-section-num{width:30px;height:30px;border-radius:50%;background:#004475;color:white;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .sw-section-title{font-size:16px;font-weight:600;color:#003058;}
+  .sw-card{background:white;border-radius:12px;border:1px solid #e2e6ea;padding:24px 22px;}
+  .sw-welcome-icon{width:52px;height:52px;background:#E6F1FB;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+  .sw-welcome-icon i{font-size:24px;color:#004475;}
+  .sw-welcome-center{text-align:center;}
+  .sw-welcome-center h3{font-size:18px;font-weight:600;color:#003058;margin-bottom:8px;}
+  .sw-divider{width:40px;height:3px;background:#E8A000;border-radius:2px;margin:14px auto;}
+  .sw-welcome-center p{font-size:15px;color:#5a6472;line-height:1.7;margin-bottom:8px;}
+  .sw-highlight{color:#004475;font-weight:600;}
+  .sw-trust{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:18px;}
+  .sw-trust-item{display:flex;align-items:center;gap:6px;font-size:12px;color:#5a6472;}
+  .sw-trust-item i{font-size:16px;color:#004475;}
+  .sw-cta-wrap{text-align:center;margin-top:22px;}
+  .sw-cta{display:inline-block;background:#004475;color:white;text-decoration:none;padding:13px 36px;border-radius:8px;font-size:15px;font-weight:600;}
+  .sw-cta:hover{background:#003058;}
+  .sw-cta-note{font-size:12px;color:#8a95a0;margin-top:8px;}
+  .sw-info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:4px;}
+  .sw-info-tile{background:#f4f6f9;border-radius:8px;padding:14px 12px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;}
+  .sw-info-tile i{font-size:22px;color:#004475;}
+  .sw-info-tile span{font-size:12px;color:#5a6472;line-height:1.4;}
+  .sw-row{display:flex;flex-direction:column;gap:10px;margin-top:4px;}
+  .sw-row-item{display:flex;align-items:flex-start;gap:12px;padding:12px;background:#f4f6f9;border-radius:8px;}
+  .sw-row-item i{font-size:18px;color:#004475;flex-shrink:0;margin-top:2px;}
+  .sw-row-item strong{display:block;font-size:14px;font-weight:600;color:#003058;margin-bottom:2px;}
+  .sw-row-item p{font-size:13px;color:#5a6472;}
+  .sw-footer{background:#003058;padding:22px 24px;}
+  .sw-footer-inner{max-width:700px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:18px;}
+  .sw-footer-contact{display:flex;gap:6px;align-items:center;color:rgba(255,255,255,0.55);font-size:12px;margin-bottom:6px;}
+  .sw-footer-contact i{font-size:14px;color:#E8A000;}
+  .sw-footer-links{display:flex;flex-direction:column;gap:6px;align-items:flex-end;}
+  .sw-footer-links a{color:#7FBFE8;font-size:13px;text-decoration:none;}
+  .sw-footer-links a:hover{color:#b3d9f5;}
+  .sw-footer-bottom{max-width:700px;margin:14px auto 0;text-align:center;color:rgba(255,255,255,0.35);font-size:11px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.12);}
+  @media(max-width:460px){
+    .sw-header-banner h2{font-size:20px;}
+    .sw-main{padding:20px 14px;}
+    .sw-card{padding:18px 16px;}
+    .sw-footer-links{align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+<div class="sw-page">
+
+  <header class="sw-header">
+    <div class="sw-header-top">
+      <img src="https://www.soyoda.com/wp-content/uploads/2022/08/Logo-soyoda-1-140x39.png" alt="Soyoda"
+        onerror="this.style.display='none';document.getElementById('hdr-fallback').style.display='block';" />
+      <span class="sw-header-logo-fallback" id="hdr-fallback">SOYODA</span>
+      <span class="sw-header-badge">Encuesta de satisfacción · 2026</span>
+    </div>
+    <div class="sw-header-banner">
+      <h1>Desarrollamos largas amistades</h1>
+      <h2>Tu opinión transforma nuestra empresa</h2>
+      <p>Política de mejora continua · Edición 2026</p>
+    </div>
+    <div class="sw-chevron-strip"></div>
+  </header>
+
+  <main class="sw-main">
+
+    <div class="sw-card">
+      <div class="sw-welcome-center">
+        <div class="sw-welcome-icon">
+          <i class="ti ti-star"></i>
+        </div>
+        <h3>Estimado cliente, eres lo más importante para nosotros</h3>
+        <div class="sw-divider"></div>
+        <p>En <span class="sw-highlight">Soyoda S.A.</span> creemos que las mejores relaciones comerciales se construyen escuchando. Tu confianza es el motor que nos impulsa a mejorar cada día.</p>
+        <p>Esta breve encuesta es nuestra forma de asegurarnos de que seguimos siendo la empresa que mereces. Tu retroalimentación guía cada decisión que tomamos.</p>
+        <div class="sw-trust">
+          <span class="sw-trust-item"><i class="ti ti-lock"></i> Anónimo y seguro</span>
+          <span class="sw-trust-item"><i class="ti ti-clock"></i> Solo 3 minutos</span>
+          <span class="sw-trust-item"><i class="ti ti-heart"></i> Tu voz importa</span>
+        </div>
+        <div class="sw-cta-wrap">
+          <a class="sw-cta" href="https://form.typeform.com/to/rq3T1GYX" target="_blank" rel="noopener">
+            Completar encuesta &nbsp;→
+          </a>
+          <p class="sw-cta-note">Haz clic para abrir el formulario en una nueva ventana</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sw-card">
+      <div class="sw-section-label">
+        <div class="sw-section-num">1</div>
+        <span class="sw-section-title">¿Por qué valoramos tu retroalimentación?</span>
+      </div>
+      <div class="sw-info-grid">
+        <div class="sw-info-tile"><i class="ti ti-chart-bar"></i><span>Mejoramos nuestros procesos y servicio</span></div>
+        <div class="sw-info-tile"><i class="ti ti-users"></i><span>Capacitamos mejor a nuestro equipo</span></div>
+        <div class="sw-info-tile"><i class="ti ti-package"></i><span>Optimizamos nuestra oferta de productos</span></div>
+        <div class="sw-info-tile"><i class="ti ti-trophy"></i><span>Mantenemos nuestros estándares de excelencia</span></div>
+      </div>
+    </div>
+
+    <div class="sw-card">
+      <div class="sw-section-label">
+        <div class="sw-section-num">2</div>
+        <span class="sw-section-title">Sobre la encuesta</span>
+      </div>
+      <div class="sw-row">
+        <div class="sw-row-item">
+          <i class="ti ti-clock"></i>
+          <div><strong>Duración estimada</strong><p>Menos de 3 minutos. Diseñada para ser rápida y sencilla.</p></div>
+        </div>
+        <div class="sw-row-item">
+          <i class="ti ti-shield-check"></i>
+          <div><strong>Privacidad garantizada</strong><p>Tus respuestas son anónimas y se usan únicamente para mejora interna.</p></div>
+        </div>
+        <div class="sw-row-item">
+          <i class="ti ti-device-mobile"></i>
+          <div><strong>Compatible con cualquier dispositivo</strong><p>Puedes completarla desde tu celular, tablet o computadora.</p></div>
+        </div>
+      </div>
+      <div class="sw-cta-wrap">
+        <a class="sw-cta" href="https://form.typeform.com/to/rq3T1GYX" target="_blank" rel="noopener">
+          Ir a la encuesta &nbsp;→
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="sw-footer">
+    <div class="sw-footer-inner">
+      <div>
+        <img src="https://www.soyoda.com/wp-content/uploads/2022/08/Logo-soyoda-1-140x39.png" alt="Soyoda"
+          style="height:32px;object-fit:contain;filter:brightness(10);"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+        <span style="display:none;color:white;font-size:18px;font-weight:600;">SOYODA</span>
+      </div>
+      <div>
+        <div class="sw-footer-contact"><i class="ti ti-map-pin"></i><span>Km 14.5 Vía Daule, Guayaquil</span></div>
+        <div class="sw-footer-contact"><i class="ti ti-phone"></i><span>+593 4 5000 300</span></div>
+        <div class="sw-footer-contact"><i class="ti ti-mail"></i><span>contactcenter@soyoda.com</span></div>
+      </div>
+      <div class="sw-footer-links">
+        <a href="https://www.soyoda.com/" target="_blank" rel="noopener">www.soyoda.com</a>
+        <a href="https://www.facebook.com/SoyodaSA" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/soyodasa/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/company/soyodasaec/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="sw-footer-bottom">
+      © 2026 Soyoda S.A. · Todos los derechos reservados · Custodio: Gerencia de Marketing
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
